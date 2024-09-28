@@ -8,20 +8,6 @@ return {
   },
   config = function()
     require("neo-tree").setup({
-      git_status = {
-        symbols = {
-          added = "✚",
-          modified = "",
-          deleted = "✖",
-          renamed = "󰁕",
-          -- Status type
-          untracked = "",
-          ignored = "",
-          unstaged = "󰄱",
-          staged = "",
-          conflict = "",
-        },
-      },
       window = {
         width = 35,
       },
