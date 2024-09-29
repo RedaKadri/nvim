@@ -2,16 +2,16 @@ return {
   "nvim-lualine/lualine.nvim",
   config = function()
     local colors = {
-      blue = "#7aa2f7",
-      cyan = "#7dcfff",
-      black = "#15161e",
-      white = "#a9b1d6",
-      red = "#f7768e",
-      violet = "#bb9af7",
-      grey = "#292e42",
+      blue = "#81a1c1",
+      cyan = "#88c0d0",
+      black = "#3b4252",
+      white = "#d8dee9",
+      red = "#bf616a",
+      violet = "#b48ead",
+      grey = "#4c566a",
     }
 
-    local bubbles_theme = {
+    local theme = {
       normal = {
         a = { fg = colors.black, bg = colors.cyan },
         b = { fg = colors.white, bg = colors.grey },
@@ -31,7 +31,7 @@ return {
 
     require("lualine").setup({
       options = {
-        theme = bubbles_theme,
+        theme = theme,
         component_separators = "",
         section_separators = { left = "", right = "" },
       },
