@@ -35,10 +35,10 @@ return {
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
 			})
-      lspconfig.volar.setup({
+			lspconfig.volar.setup({
 				capabilities = capabilities,
 			})
-lspconfig.tailwindcss.setup({
+			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
 			})
 
