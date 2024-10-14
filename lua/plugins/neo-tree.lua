@@ -9,11 +9,17 @@ return {
 	config = function()
 		require("neo-tree").setup({
 			window = {
+				position = "right",
 				width = 35,
-		},
-	})
+			},
+			filesystem = {
+				always_show = {
+					".gitignore",
+				},
+			},
+		})
 
-		vim.keymap.set("n", "<C-b>", ":Neotree filesystem reveal right<CR>", {})
+		vim.keymap.set("n", "<C-b>", ":Neotree filesystem reveal <CR>", {})
 		vim.keymap.set("n", "<C-n>", ":Neotree filesystem close <CR>", {})
 	end,
 }
