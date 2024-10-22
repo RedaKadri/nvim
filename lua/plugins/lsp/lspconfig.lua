@@ -87,6 +87,7 @@ return {
 			end,
 			["ts_ls"] = function()
 				lspconfig["ts_ls"].setup({
+					capabilities = capabilities,
 					init_options = {
 						plugins = {
 							{
@@ -111,7 +112,7 @@ return {
 				-- configure emmet language server
 				lspconfig["emmet_ls"].setup({
 					capabilities = capabilities,
-					filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue" },
+					filetypes = { "html", "css", "sass", "scss", "less" },
 				})
 			end,
 			["lua_ls"] = function()

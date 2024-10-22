@@ -2,26 +2,25 @@ return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
 		local colors = {
-			blue = "#7aa2f7",
-			green = "#a3be8c",
-			black = "#15161e",
-			white = "#c0caf5",
-			red = "#db4b4b",
+			oldwhite = "#c8c093",
+			blue = "#658594",
+			black = "#12120f",
+			white = "#c5c9c5",
+			red = "#e46876",
 			orange = "#ff9e64",
-			violet = "#bb9af7",
-			grey = "#292e42",
+			violet = "#938aa9",
+			grey = "#1F1F28",
 		}
+
 		local theme = {
 			normal = {
-				a = { fg = colors.black, bg = colors.blue },
+				a = { fg = colors.black, bg = colors.oldwhite },
 				b = { fg = colors.white, bg = colors.grey },
 				c = { fg = colors.white },
 			},
-
-			insert = { a = { fg = colors.black, bg = colors.green } },
+			insert = { a = { fg = colors.black, bg = colors.blue } },
 			visual = { a = { fg = colors.black, bg = colors.violet } },
 			replace = { a = { fg = colors.black, bg = colors.red } },
-
 			inactive = {
 				a = { fg = colors.white, bg = colors.black },
 				b = { fg = colors.white, bg = colors.black },
