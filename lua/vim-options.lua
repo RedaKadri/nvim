@@ -7,6 +7,8 @@ vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 
+vim.opt.swapfile = false
+
 -- vim.opt.clipboard = "unnamedplus"
 
 vim.cmd("set expandtab")
@@ -19,6 +21,5 @@ vim.keymap.set("n", "<leader>cs", ":nohl<CR>", {})
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {})
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {})
 
-vim.keymap.set("n", "<leader>y", "\"+y", {})
-vim.keymap.set("v", "<leader>y", "\"+y", {})
-
+vim.keymap.set("n", "<leader>y", '"+y', {})
+vim.keymap.set("v", "<leader>y", '"+y', {})
