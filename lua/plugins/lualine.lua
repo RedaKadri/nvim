@@ -9,7 +9,7 @@ return {
 			red = "#e46876",
 			orange = "#ff9e64",
 			violet = "#938aa9",
-			grey = "#1F1F28",
+			grey = "#16161d",
 		}
 
 		local theme = {
