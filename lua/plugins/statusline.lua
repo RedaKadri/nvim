@@ -1,5 +1,9 @@
 return {
 	"nvim-lualine/lualine.nvim",
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+		"meuter/lualine-so-fancy.nvim",
+	},
 	config = function()
 		local colors = {
 			oldwhite = "#c8c093",
@@ -16,7 +20,7 @@ return {
 			normal = {
 				a = { fg = colors.black, bg = colors.oldwhite },
 				b = { fg = colors.white, bg = colors.grey },
-				c = { fg = colors.white },
+				c = { fg = colors.white, bg = "#2a2a37" },
 			},
 			insert = { a = { fg = colors.black, bg = colors.blue } },
 			visual = { a = { fg = colors.black, bg = colors.violet } },
@@ -31,51 +35,37 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = theme,
+				component_separators = { left = "│", right = "│" },
 				section_separators = { left = "", right = "" },
-				component_separators = { left = "", right = "" },
+				globalstatus = true,
+				refresh = {
+					statusline = 100,
+				},
 			},
 			sections = {
-				lualine_a = { { "mode", right_padding = 2 } },
-				lualine_b = {
-					"filename",
-					"branch",
-					"diff",
+				lualine_a = {
+					{ "fancy_mode" },
 				},
-				lualine_c = { "%=" },
-				lualine_x = {},
+				lualine_b = {
+					{ "fancy_branch" },
+					{ "fancy_diff" },
+				},
+				lualine_c = {
+					{ "fancy_cwd" },
+				},
+				lualine_x = {
+					{ "fancy_macro" },
+					{ "fancy_diagnostics" },
+					{ "fancy_searchcount" },
+					{ "fancy_location" },
+				},
 				lualine_y = {
-					{
-						"diagnostics",
-						source = { "nvim" },
-						sections = { "error" },
-						diagnostics_color = { error = { bg = colors.red, fg = colors.black } },
-					},
-					{
-						"diagnostics",
-						source = { "nvim" },
-						sections = { "warn" },
-						diagnostics_color = { warn = { bg = colors.orange, fg = colors.black } },
-					},
-					"filetype",
-					"progress",
+					{ "fancy_filetype", ts_icon = "" },
 				},
 				lualine_z = {
-					{
-						"location",
-						left_padding = 2,
-					},
+					{ "fancy_lsp_servers" },
 				},
 			},
-			inactive_sections = {
-				lualine_a = { "filename" },
-				lualine_b = {},
-				lualine_c = {},
-				lualine_x = {},
-				lualine_y = {},
-				lualine_z = { "location" },
-			},
-			tabline = {},
-			extensions = {},
 		})
 	end,
 }
