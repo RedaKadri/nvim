@@ -1,10 +1,10 @@
 return {
 	{
-		"folke/tokyonight.nvim",
+		"rmehri01/onenord.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- vim.cmd.colorscheme("tokyonight-night")
+			-- vim.cmd.colorscheme("onenord")
 		end,
 	},
 	{
@@ -15,14 +15,28 @@ return {
 			require("kanagawa").setup({
 				transparent = true,
 				colors = {
+					palette = {
+						fujiWhite = "#d8dee9",
+					},
 					theme = {
 						all = {
 							ui = {
 								bg_gutter = "none",
+								float = {
+									bg = "none",
+								},
 							},
 						},
 					},
 				},
+				overrides = function(colors)
+					local theme = colors.theme
+					return {
+						TelescopePromptBorder = { fg = "#d8dee9" },
+						TelescopeResultsBorder = { fg = "#d8dee9" },
+						TelescopePreviewBorder = { fg = "#d8dee9" },
+					}
+				end,
 			})
 			vim.cmd.colorscheme("kanagawa")
 		end,
