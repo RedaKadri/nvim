@@ -29,8 +29,7 @@ return {
 						},
 					},
 				},
-				overrides = function(colors)
-					local theme = colors.theme
+				overrides = function()
 					return {
 						TelescopePromptBorder = { fg = "#d8dee9" },
 						TelescopeResultsBorder = { fg = "#d8dee9" },
