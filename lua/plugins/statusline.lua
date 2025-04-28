@@ -9,7 +9,7 @@ return {
 			options = {
 				theme = "onenord",
 				component_separators = "",
-				section_separators = "",
+				section_separators = { left = "", right = "" },
 				globalstatus = true,
 				refresh = {
 					statusline = 100,
@@ -17,7 +17,10 @@ return {
 			},
 			sections = {
 				lualine_a = {
-					{ "mode" },
+					{
+						"mode",
+						icon = "",
+					},
 				},
 				lualine_b = {
 					{ "fancy_branch" },
