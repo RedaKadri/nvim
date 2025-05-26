@@ -1,10 +1,11 @@
 return {
 	{
-		"rmehri01/onenord.nvim",
+		"gbprod/nord.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- vim.cmd.colorscheme("onenord")
+			require("nord").setup({})
+			vim.cmd.colorscheme("nord")
 		end,
 	},
 	{
@@ -37,7 +38,7 @@ return {
 					}
 				end,
 			})
-			vim.cmd.colorscheme("kanagawa")
+			-- vim.cmd.colorscheme("kanagawa")
 		end,
 	},
 }
